@@ -59,7 +59,7 @@ pub unsafe fn set_print_channel_cs(channel: UpChannel, cs: &'static CriticalSect
     CRITICAL_SECTION.store(cs as *const _ as *mut _, Ordering::SeqCst);
 }
 
-/// Sets the channel to use for [`rprint`] and [`rprintln`].
+/// Sets the channel to use for [`rprint`], [`rprintln`]  [`debug_rptint`] and [`debug_rprintln`]
 ///
 /// This function is available only if you have enabled a platform support feature. Otherwise,
 /// [`set_print_channel_cs`] must be used.
